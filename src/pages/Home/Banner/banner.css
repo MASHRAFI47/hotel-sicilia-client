@@ -1,0 +1,44 @@
+@keyframes myAnimation {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+}
+
+
+.myAnimation {
+    animation: myAnimation 6s ease-in-out infinite alternate;
+}
+
+
+@keyframes myAnimation2 {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+
+.myAnimation2 {
+    animation: myAnimation2 6s ease-in-out infinite alternate;
+}
