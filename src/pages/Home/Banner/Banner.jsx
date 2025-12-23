@@ -7,6 +7,7 @@ import './banner.css'
 import banner1 from '../../../assets/images/banner/banner1.webp'
 import banner2 from '../../../assets/images/banner/banner2.webp'
 import banner3 from '../../../assets/images/banner/banner3.jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -29,11 +30,11 @@ const Banner = () => {
                             Discover a world of comfort, luxury, and unparalleled hospitality at Hoteller. Nestled in the heart of city, our exquisite hotel is your home away from home, where every stay is a memorable experience.Discover a world of comfort.
                         </p>
 
-                        <a className="btn bg-[#0c3988] text-white text-lg rounded-xl"><p>Book Your Stay Now</p></a>
+                        <Link to={'/bookings'} className="btn bg-[#0c3988] text-white text-lg rounded-xl"><p>Book Your Stay Now</p></Link>
                     </div>
                 </div>
                 <div className="col-span-5" data-aos="fade-in" data-aos-duration="1000">
-                    <img src={banner1} className=' w-full' alt="banner image" />
+                    <img src={banner1} className=' w-full rounded-lg' alt="banner image" />
                 </div>
 
                 {/* Absolute images */}

@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
@@ -108,6 +108,12 @@ const BookingDetails = () => {
     }
 
     const handleReserve = () => {
+        if (!user?.email) {
+            toast.error("Please login first")
+            return;
+        }
+
+
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",

@@ -1,5 +1,6 @@
 
 //images
+import { Link } from 'react-router-dom'
 import hospitalityImg from '../../../assets/images/hospitality-images/1783.jpg'
 import Titles from '../../../components/Titles'
 
@@ -14,7 +15,7 @@ const Hospitality = () => {
                     <div>
                         <Titles heading={"Where Every Stay is a Hug of Hospitality"} para={"At Hoteller, we pride ourselves on providing a personalized and intimate experience for each guest. Our cozy rooms are thoughtfully designed to offer modern amenities while retaining the warmth and character of a home away from home. Whether you’re traveling for leisure or business, our comfortable accommodations ensure a restful night’s sleep."} />
 
-                        <a className="btn bg-[#0c3988] text-white mt-10"><p>Book Your Stay Now</p></a>
+                        <Link to={'/bookings'} className="btn bg-[#0c3988] text-white mt-10"><p>Book Your Stay Now</p></Link>
                     </div>
                 </div>
             </div>

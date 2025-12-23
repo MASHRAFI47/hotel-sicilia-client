@@ -65,6 +65,15 @@ const OrderDetails = () => {
     }
 
 
+    const handleBuyNow = () => {
+        if (!user?.email) {
+            toast.error("Please login and book a room first");
+            return;
+        }
+
+        document.getElementById(`${order?.id}`).showModal();
+    }
+
 
     if (isLoading || loading) return <LoadingSpinner />
 
@@ -91,7 +100,8 @@ const OrderDetails = () => {
                         <div><h3 className="font-semibold">${order?.price}</h3></div>
                     </div>
 
-                    <button className="btn bg-[#0c3988] hover:bg-primary text-white" onClick={() => document.getElementById(`${order?.id}`).showModal()}>Buy Now</button>
+                    {/* <button className="btn bg-[#0c3988] hover:bg-primary text-white" onClick={() => document.getElementById(`${order?.id}`).showModal()}>Buy Now</button> */}
+                    <button className="btn bg-[#0c3988] hover:bg-primary text-white" onClick={handleBuyNow}>Buy Now</button>
 
                     {/* modal */}
                     <form action="" onSubmit={handleSubmit(onSubmit)}>

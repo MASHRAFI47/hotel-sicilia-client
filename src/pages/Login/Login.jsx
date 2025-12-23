@@ -40,14 +40,14 @@ const Login = () => {
     return (
         <div className='container mx-auto py-20'>
             <div className="grid grid-cols-5 items-center">
-                <div className='col-span-3'>
+                <div className='col-span-3' data-aos="fade-in" data-aos-duration="2000">
                     <DotLottieReact
                         src="/Login.lottie"
                         loop
                         autoplay
                     />
                 </div>
-                <div className='col-span-2'>
+                <div className='col-span-2' data-aos="fade-in" data-aos-duration="1000">
                     <div className="card bg-base-100 w-full max-w-sm border shrink-0 shadow-2xl">
                         <h1 className='text-2xl text-center mt-5 font-bold'>Login Here</h1>
                         <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
